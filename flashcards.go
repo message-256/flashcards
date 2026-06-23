@@ -118,7 +118,6 @@ func main() {
 				previous = previous[:0]
 				
 			} else if input == "continue" {
-				previous = previous[:len(previous)-1]
 				break
 			} else if ans, err = strconv.Atoi(input); err != nil {
 				fmt.Println("not a number :(real error)", err)
@@ -130,6 +129,9 @@ func main() {
 			} else {
 				break
 			}
+		}
+		if input != "continue" {
+			previous = append(previous, current)
 		}
 	}
 
