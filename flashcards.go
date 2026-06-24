@@ -74,7 +74,6 @@ func main() {
 			fmt.Println(current.a, current.opp, current.b, "not unique")
 			continue
 		}
-		previous = append(previous, current)
 		for {
 			fmt.Println(current.a, string(mode[opprolled]), current.b, "=")
 			fmt.Scanf("%s", &input)
